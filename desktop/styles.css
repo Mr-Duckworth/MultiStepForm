@@ -1,0 +1,415 @@
+/*********************** Whole Webpage Style****************** */
+html {
+    padding: 2% 10%;
+    background-color: hsl(205, 70%, 91%);
+}
+
+body {
+    font-family: 'Ubuntu';
+    padding: 10px 50px 10px 10px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    color: hsl(213, 96%, 18%);
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: hsl(231, 11%, 63%) ;
+    letter-spacing: 0.5px;
+}
+
+section.full-page {
+    display: grid;
+    grid-template-columns:(35%, 65%) ;
+    gap: 8%;
+    grid-template-rows: 1fr;
+}
+
+section.left-section {
+    width: 270px;
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 20px;
+    background: transparent;
+    background-image: url("assets/images/bg-sidebar-desktop.svg");
+    height: 560px;
+    border-radius: 15px;
+}
+
+section.right-section {
+    width: 570px;
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    background: transparent;
+}
+
+form {
+    display: none;
+}
+
+.step-two {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+#count {
+    display: none;
+}
+
+/*****************Navbar Section ******************/
+
+
+div.sidebar {
+    background: transparent;
+}
+
+ul.list-group {
+    background: transparent;
+    border: 0;
+}
+
+li.list-group-item {
+    height: 70px;
+    background: transparent;
+    border: 0;
+}
+
+input[type="radio"].form-check-input {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="radio"].form-check-input:checked {
+    background-color: hsl(206, 94%, 87%);
+    border: 0;
+}
+
+label span:first-of-type {
+    position: relative;
+    left: -24px;
+    top: 6px;
+    font-size: 15px;
+    color: #fff;
+}
+
+div.ms-2 {
+    position: relative;
+    right: -30px;
+    top: -35px; 
+    color: hsl(229, 24%, 87%);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+div.fw-bold {
+    color: hsl(217, 100%, 97%);
+    letter-spacing: 1px;
+    
+}
+
+/* ********************* Form One ****************************/
+
+
+div.step-one-info {
+    padding-top: 20px;
+}
+
+.step-one-info label {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+}
+
+input.form-control {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 7px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+input.form-control::placeholder {
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    appearance: none;
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+button.btn {
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: hsl(213, 96%, 18%);
+    padding: 8px 19px 8px 19px;
+    text-decoration: none;
+    float: right;
+    margin-top: 70px;
+}
+  
+button.btn:hover {
+    background: hsl(213, 96%, 29%);
+    color: #ffffff;
+}
+
+/*************** Form Two **********************/
+
+
+.btn-outline-primary {
+    height: fit-content;
+    width: 162px;
+    padding: 15px 20px 10px;
+    border: 1px solid hsl(229, 24%, 87%);
+    background-color: #fff;
+    margin-right: 25px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 10px;
+}
+
+.btn-group>.btn:nth-child(n+3) {
+    border-radius: 10px;
+}
+
+.btn-check+.btn:hover {
+    border: 1px solid  hsl(243, 100%, 62%);
+}
+
+
+.btn-check+.btn:focus, .btn-check:checked+.btn{
+    background-color: hsl(217, 100%, 97%);
+    border: 1px solid  hsl(243, 100%, 62%);
+}
+
+label img {
+    padding-bottom: 50px;
+}
+
+.step-two p {
+    margin-top: -3px;
+}
+
+p.strong{
+    margin-top: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(213, 96%, 18%) ;
+}
+
+.form-check {
+    margin-top: -22px;
+    margin-left: 80px;
+}
+
+.form-check label {
+    margin-left: 14px;
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
+.toggle {
+    margin-top: 8%;
+    margin-left: 30%;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+
+button.btn-outline-light {
+    margin-top: 70px;
+    background: transparent;
+    border: none;
+    color: hsl(231, 11%, 63%);
+    font-size: 15px;
+    font-weight: 700;
+    float: left;
+}
+
+button.btn-outline-light:hover, button.btn-outline-light:focus {
+    background: transparent;
+    border: none;
+    color: hsl(213, 96%, 18%);
+}
+
+/*****************Form Three **************************/
+
+label.step-three-label   {
+    width: 570px;
+    display: grid;
+    grid-template-columns:(1fr, 1fr, 1fr);
+    gap: 20px;
+    grid-template-rows: 1fr;
+    padding: 20px;
+    margin-top: 12px;
+}
+
+div.step-3-one {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+div.step-3-two {
+    grid-column: 2;
+    grid-row: 1;
+    width: 400px;
+    text-align: left;
+} 
+
+div.step-3-two h5 {
+    margin: 0;
+}
+
+div.step-3-three {
+    grid-column: 3;
+    grid-row: 1;
+    padding-top: 12px;
+    padding-right: 15px;
+}
+
+.step-three .pricing {
+    color: hsl(243, 100%, 62%);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.add-ons {
+    display: none;
+}
+
+.step-three .active {
+    display: block;
+    
+}
+
+.step-three .form-check-input {
+    width: 20px;
+    height: 20px;
+}
+
+.step-three .form-check-input:focus {
+    border-color: #fff;
+    outline: none;
+    box-shadow: none;
+}
+
+.step-three .form-check-input:checked {
+    background-color: hsl(243, 100%, 62%);
+}
+
+.step-three .btn-check {
+    position: relative;
+}
+
+label.btn:hover {
+    border: 1px solid hsl(243, 100%, 62%);
+}
+
+label.btn:active {
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);   
+}
+
+label.btn:first-child:active, label:not(.btn-check)+.btn:active {
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color: hsl(217, 100%, 97%);
+}
+
+/* ***********Form Four *******************/
+
+
+form.step-four .whole-selection {
+    padding: 40px 20px 0;
+    width: 500px;
+}
+
+form.step-four .selection {
+    padding: 10px 20px;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 7px;
+}
+
+div.selection>p {
+    padding-bottom: 15px;
+}
+
+form.step-four .selection-total {
+    padding: 30px 10px 10px;
+}
+
+form.step-four h5 {
+    padding: 0;
+    margin: 0;
+}
+
+form.step-four a {
+    color: hsl(231, 11%, 63%);
+}
+
+form.step-four a:hover {
+    color: hsl(243, 100%, 62%);
+}
+
+form.step-four .selection-pricing {
+    float: right;
+    margin-top: -20px;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+}
+
+form.step-four span {
+    float: right;
+    margin-top: -40px;
+    color: none;
+    font-weight: 400;
+}
+
+form.step-four .pricing-total {
+    float: right;
+    margin-top: -20px;
+    color:  hsl(243, 100%, 62%);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+button.step-four-btn {
+    background-color: hsl(243, 100%, 62%);
+}
+
+button.step-four-btn:hover {
+    background-color: hsl(243, 90%, 80%);
+}
+
+/*****************Step Five***************************/
+
+form.step-five {
+    text-align: center;
+    padding: 20% 0 ;
+}

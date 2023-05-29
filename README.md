@@ -34,8 +34,9 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL:(https://github.com/Mr-Duckworth/multiStepForm.git)
+- Desktop Live Site URL: (https://mr-duckworth.github.io/desktop/)
+- Mobile Live Site URL: (https://mr-duckworth.github.io/mobile/)
 
 ## My process
 I could have completed it sooner if i had made use of frameworks like react and next js but i choose to use the html + bootstrap + css + js which made it a tard bit harder but i was able to figure it out at every step i was stuck with the help of google and stackoverflow 

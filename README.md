@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:(https://github.com/Mr-Duckworth/multiStepForm.git)
+- Solution URL:(https://github.com/Mr-Duckworth/MultiStepForm.git)
 - Desktop Live Site URL: (https://mr-duckworth.github.io/desktop/)
 - Mobile Live Site URL: (https://mr-duckworth.github.io/mobile/)
 

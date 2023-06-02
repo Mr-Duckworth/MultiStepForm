@@ -341,7 +341,7 @@ button.btn-outline-light:hover, button.btn-outline-light:focus {
     position: relative;
 }
 
-label.btn:hover {
+.step-three-label:hover {
     border: 1px solid hsl(243, 100%, 62%);
 }
 

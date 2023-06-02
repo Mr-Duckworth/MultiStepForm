@@ -27,8 +27,8 @@ p {
 
 section.full-page {
     display: grid;
-    grid-template-columns:(35%, 65%) ;
-    gap: 8%;
+    grid-template-columns:35% 65% ;
+    gap: 5%;
     grid-template-rows: 1fr;
 }
 
@@ -66,6 +66,17 @@ form {
 
 #count {
     display: none;
+}
+
+.error {
+    display: none;
+    font-weight: 700;
+    font-size: 0.7rem;
+    color: red;
+}
+
+.shake {
+    animation: shake 150ms 2 linear;
 }
 
 /*****************Navbar Section ******************/
@@ -259,39 +270,41 @@ button.btn-outline-light:hover, button.btn-outline-light:focus {
 
 /*****************Form Three **************************/
 
-label.step-three-label   {
+.step-three-label   {
     width: 570px;
+    border: 1px solid hsl(229, 24%, 87%) ;
     display: grid;
-    grid-template-columns:(1fr, 1fr, 1fr);
-    gap: 20px;
+    grid-template-columns: 10% 73% 10%;
+    gap: 10px;
     grid-template-rows: 1fr;
-    padding: 20px;
-    margin-top: 12px;
+    padding: 17px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+
 }
 
-div.step-3-one {
+.step-3-one {
     grid-column: 1;
     grid-row: 1;
-    padding-top: 10px;
+    padding-top: 8px;
     padding-right: 10px;
 }
 
-div.step-3-two {
+.step-3-two {
     grid-column: 2;
     grid-row: 1;
     width: 400px;
     text-align: left;
 } 
 
-div.step-3-two h5 {
+.step-3-two h5 {
     margin: 0;
 }
 
-div.step-3-three {
+.step-3-three {
     grid-column: 3;
     grid-row: 1;
     padding-top: 12px;
-    padding-right: 15px;
 }
 
 .step-three .pricing {
@@ -332,14 +345,9 @@ label.btn:hover {
     border: 1px solid hsl(243, 100%, 62%);
 }
 
-label.btn:active {
+.show {
+    background: hsl(217, 100%, 97%);
     border: 1px solid hsl(243, 100%, 62%);
-    background-color: hsl(217, 100%, 97%);   
-}
-
-label.btn:first-child:active, label:not(.btn-check)+.btn:active {
-    border: 1px solid hsl(243, 100%, 62%);
-    background-color: hsl(217, 100%, 97%);
 }
 
 /* ***********Form Four *******************/

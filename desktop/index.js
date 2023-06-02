@@ -2,16 +2,25 @@ const navBarOne = document.querySelector("input#one");
 const navBarTwo = document.querySelector("input#two");
 const navBarThree = document.querySelector("input#three");
 const navBarFour = document.querySelector("input#four");
+
 const form = Array.from(document.querySelectorAll("form"));
+
 const nextBtn = document.querySelectorAll("button.btn");
 const prevBtn = document.querySelectorAll("button.btn-outline-light");
 const toggle = document.querySelector("#stepTwoSwitch");
+
 const selectionHeading = document.querySelector("h5.selection-heading");
 const selectionPrice = document.querySelector("p.selection-pricing");
+
 const Addons = document.querySelectorAll(".selection-addons");
 const AddonsPrice = document.querySelectorAll(".addons-pricing");
+const addonsChecked = document.querySelectorAll(".step-three label");
 const total = document.querySelector(".total");
 const pricingTotal = document.querySelector(".pricing-total")
+
+
+const inputEmail = document.querySelector("#emailAddress");
+const inputPhone = document.querySelector("#phoneNumber");
 
 navBarOne.addEventListener("click", () => {
     navBarOne.checked = 1;
@@ -47,6 +56,65 @@ navBarFour.addEventListener("click", () => {
 })
 
 
+function checkEmail(email) {
+    if (email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      return true;
+    }
+    return false;
+}
+  
+function checkPhone(phone) {
+    if (phone.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{5})$/)) {
+      return true;
+    }
+    return false;
+}
+
+function showError(target) {
+    if (target == "email") {
+    /* SHAKE ANIMATION */
+    inputEmail.style.border = "1px solid red";
+    inputEmail.classList.add("shake");
+    inputEmail.classList.remove("shake");
+    void inputEmail.offsetWidth;
+    inputEmail.classList.add("shake");
+  
+    /*SHOW ERROR */
+  
+    let error = document.querySelector(".email-error");
+    error.style.display = "inline-block";
+  
+    setTimeout(() => {
+        inputEmail.style.border = "2px solid hsl(229, 24%, 87%)";
+        inputEmail.style.transition = "border 1s linear";
+        error.style.display = "none";
+    }, 6000);
+
+    } else if (target == "phone") {
+
+    inputPhone.style.border = "1px solid red";
+
+    /* SHAKE ANIMATION */
+
+    inputPhone.classList.add("shake");
+    inputPhone.classList.remove("shake");
+    void inputPhone.offsetWidth;
+    inputPhone.classList.add("shake");
+  
+    /*SHOW ERROR */
+  
+    let error = document.querySelector(".phone-error");
+    error.style.display = "inline-block";
+
+    setTimeout(() => {
+        inputPhone.style.border = "2px solid hsl(229, 24%, 87%)";
+        inputPhone.style.transition = "border 1s linear";
+        error.style.display = "none";
+      }, 6000);
+    }
+}
+
+
 nextBtn.forEach(button => {
     button.addEventListener("click",() => {
         changeStep("next");
@@ -60,12 +128,29 @@ prevBtn.forEach(button=> {
 });
 
 function changeStep(btn) {
+    let email = inputEmail.value;
+    let phone = inputPhone.value;
+    let checkedEmail = checkEmail(email);
+    let checkedPhone = checkPhone(phone);
     let index = 0;
     const active = document.querySelector("form.active");
     index = form.indexOf(active);
     form[index].classList.remove("active");
     if (btn === "next") {
-        index++;    
+        if (!checkedEmail) {
+            showError("email");
+            index = 0
+        }
+      
+        if (!checkedPhone) {
+            showError("phone");
+            index = 0
+        }
+    
+        if (checkedEmail && checkedPhone) {
+            index++;
+        }   
+
     } else if (btn === "prev") {
         index--
     }
@@ -197,6 +282,17 @@ function submitBtn() {
             pricingTotal.innerHTML = "+$" + addonsYearlyAmount + "/yr"
         }
         
+}
+
+function addonToggle() {
+    const addOns = document.getElementsByName("add-ons");
+    for (let index = 0; index < addOns.length; index++) {
+        if (addOns[index].checked) {
+            addonsChecked[index].classList.add("show");
+        } else {
+            addonsChecked[index].classList.remove("show");
+        }
+    }
 }
 
  
